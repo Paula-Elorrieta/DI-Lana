@@ -1,0 +1,97 @@
+/* Estilo para el título principal */
+h1 {
+    font-family: 'Saiyan Sans', sans-serif;
+    color: #FF4500; /* Dragon Ball orange */
+    text-shadow: 2px 2px 4px #000000; /* Sombra negra para un efecto audaz */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 20px;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+/* Estilo para los subtítulos */
+h3 {
+    font-family: 'Saiyan Sans', sans-serif;
+    color: #FF4500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las líneas horizontales */
+hr {
+    border: 0;
+    height: 2px;
+    background: #FF4500;
+    margin: 10px 0;
+}
+
+/* Estilo para el contenedor de filas */
+#row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Estilo para las columnas */
+.col {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-family: 'Saiyan Sans', sans-serif;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"] {
+    font-family: 'Saiyan Sans', sans-serif;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #FF4500;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    font-family: 'Saiyan Sans', sans-serif;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e03e00;
+}
