@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PersonajesComponent } from "../personajes/personajes.component";
 import { Personaje } from '../interfaces/dbz.interface';
-import { AgregarComponent } from "../agregar/agregar.component";
+import { AgregarComponent } from '../agregar/agregar.component';
+import { ServicioService } from '../servicio.service';
 
 
 @Component({
@@ -15,21 +16,20 @@ import { AgregarComponent } from "../agregar/agregar.component";
 })
 export class MainPageComponent {
 
-  Goku: Personaje = {
-    nombre: 'Goku',
-    poder: 10000
+  dbzService: ServicioService=inject(ServicioService);
+
+  // personajes: Personaje[] = [];
+  constructor() {
+    // this.personajes = this.dbzService.personajes;
   }
 
-  Krillin: Personaje = {
-    nombre: 'Krillin',
-    poder: 5000
+  get personajes() {
+    return this.dbzService.personajes;
   }
 
-  Vegetta: Personaje = {
-    nombre: 'Vegetta',
-    poder: 8000
+  nuevo: Personaje = {
+    nombre: "",
+    poder: 0
   }
-
-  personajes: Personaje[] = [this.Krillin, this.Goku, this.Vegetta];
-
+  
 }

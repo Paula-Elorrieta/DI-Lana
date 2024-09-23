@@ -15,10 +15,7 @@ export class AgregarComponent {
 
   @Input() personajes: Personaje[] = [];
 
-  nuevo: Personaje = {
-    nombre: "",
-    poder: 0
-  }
+  @Input() nuevo: Personaje = {"nombre": "", "poder": 0}; 
 
   agregar() {
     if (this.nuevo.nombre.trim().length === 0) {
@@ -31,6 +28,5 @@ export class AgregarComponent {
       nombre: "",
       poder: 0
     }
- }
-  
+  }
 }

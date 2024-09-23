@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { ServicioService } from '../servicio.service';
+import { inject } from '@angular/core';
 
 @Component({
   selector: 'app-personajes',
@@ -10,5 +12,7 @@ import { Personaje } from '../interfaces/dbz.interface';
   styleUrl: './personajes.component.css'
 })
 export class PersonajesComponent {
-  @Input() personajes: Personaje[] = []; 
+  dbzService: ServicioService=inject (ServicioService);
+
+  @Input() personajes: Personaje[] = [];
 }
