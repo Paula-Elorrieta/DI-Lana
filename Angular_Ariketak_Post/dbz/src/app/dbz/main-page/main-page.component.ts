@@ -1,16 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-interface Personaje {
-  nombre: string;
-  poder: number;
-}
+import { PersonajesComponent } from "../personajes/personajes.component";
+import { Personaje } from '../interfaces/dbz.interface';
+import { AgregarComponent } from "../agregar/agregar.component";
 
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, PersonajesComponent, AgregarComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
 })
@@ -31,23 +30,6 @@ export class MainPageComponent {
     poder: 8000
   }
 
-  nuevo: Personaje = {
-    nombre: "",
-    poder: 0
-  }
-
   personajes: Personaje[] = [this.Krillin, this.Goku, this.Vegetta];
 
-  agregar() {
-    if (this.nuevo.nombre.trim().length === 0) {
-      return;
-    }
-    
-    console.log(this.nuevo);
-    this.personajes.push(this.nuevo);
-    this.nuevo = {
-      nombre: "",
-      poder: 0
-    }
- }
 }
