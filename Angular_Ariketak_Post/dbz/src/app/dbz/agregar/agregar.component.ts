@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
 import { FormsModule } from '@angular/forms';
 import { PersonajesComponent } from '../personajes/personajes.component';
+import { ServicioService } from '../servicio.service';
 
 @Component({
   selector: 'app-agregar',
@@ -13,20 +14,17 @@ import { PersonajesComponent } from '../personajes/personajes.component';
 })
 export class AgregarComponent {
 
-  @Input() personajes: Personaje[] = [];
-
+  //@Input() personajes: Personaje[] = [];
+  dbzService: ServicioService=inject(ServicioService);
   @Input() nuevo: Personaje = {"nombre": "", "poder": 0}; 
 
   agregar() {
     if (this.nuevo.nombre.trim().length === 0) {
       return;
+      
     }
-    
-    console.log(this.nuevo);
-    this.personajes.push(this.nuevo);
-    this.nuevo = {
-      nombre: "",
-      poder: 0
-    }
+
+    this.dbzService.agregarNuevoPersonaje(this.nuevo);
+    this.nuevo = {"nombre": "", "poder": 0};
   }
 }

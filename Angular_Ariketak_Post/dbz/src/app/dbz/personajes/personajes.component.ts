@@ -14,5 +14,10 @@ import { inject } from '@angular/core';
 export class PersonajesComponent {
   dbzService: ServicioService=inject (ServicioService);
 
-  @Input() personajes: Personaje[] = [];
+  //@Input() personajes: Personaje[] = [];
+
+  get personajes() {
+    return this.dbzService.personajes;
+  }
+
 }

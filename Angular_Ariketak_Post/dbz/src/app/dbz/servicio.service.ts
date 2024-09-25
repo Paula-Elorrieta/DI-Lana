@@ -23,7 +23,14 @@ export class ServicioService {
     poder: 8000
   }
 
-  personajes: Personaje[] = [this.Krillin, this.Goku, this.Vegetta];
+  private _personajes: Personaje[] = [this.Krillin, this.Goku, this.Vegetta];
 
+  get personajes() {
+    return [...this._personajes];
+  }
+
+  agregarNuevoPersonaje(personaje: Personaje) {
+    this._personajes.push(personaje);
+  }
 
 }

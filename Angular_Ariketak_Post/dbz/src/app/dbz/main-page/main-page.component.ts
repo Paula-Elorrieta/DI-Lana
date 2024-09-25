@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { PersonajesComponent } from "../personajes/personajes.component";
 import { Personaje } from '../interfaces/dbz.interface';
 import { AgregarComponent } from '../agregar/agregar.component';
-import { ServicioService } from '../servicio.service';
+// import { ServicioService } from '../servicio.service';
 
 
 @Component({
@@ -16,16 +16,16 @@ import { ServicioService } from '../servicio.service';
 })
 export class MainPageComponent {
 
-  dbzService: ServicioService=inject(ServicioService);
+  // dbzService: ServicioService=inject(ServicioService);
 
   // personajes: Personaje[] = [];
   constructor() {
     // this.personajes = this.dbzService.personajes;
   }
 
-  get personajes() {
-    return this.dbzService.personajes;
-  }
+  //get personajes() {
+    //return this.dbzService.personajes;
+  //}
 
   nuevo: Personaje = {
     nombre: "",
