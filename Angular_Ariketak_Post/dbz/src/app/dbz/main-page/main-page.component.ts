@@ -23,7 +23,7 @@ export class MainPageComponent {
     // this.personajes = this.dbzService.personajes;
   }
 
-  //get personajes() {
+  //get personajes() {  
     //return this.dbzService.personajes;
   //}
 
