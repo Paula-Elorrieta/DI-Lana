@@ -1,0 +1,36 @@
+<h1>Artikuluen kudeaketa</h1>
+<div *ngIf="artikulos.length > 0; else vacio">
+    <table>
+        <thead>
+            <th>Kodea</th>
+            <th>Deskribapena</th>
+            <th>Prezioa</th>
+            <th>Ezabatu</th>
+            <th>Aukeratu</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let artikulo of artikulos">
+                <td>{{artikulo.kodea}}</td>
+                <td>{{artikulo.deskribapena}}</td>
+                <td>{{artikulo.prezioa}}</td>
+                <td><button (click)="ezabatu(artikulo.kodea)">Ezabatu?</button></td>
+                <td><button (click)="aukeratu(artikulo)">Aukeratu</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #vacio><p>Ez daude artikulorik</p></ng-template>
+<div>
+    <br><br>
+    <label for="kodea">Kodea: </label>
+    <input type="number" name="kodea" [(ngModel)]="artikulo.kodea">
+    <br>
+    <label for="deskribapena">Deskribapena: </label>
+    <input type="text" name="deskribapena" [(ngModel)]="artikulo.deskribapena">
+    <br>
+    <label for="prezioa">Prezioa: </label>
+    <input type="number" name="prezioa" [(ngModel)]="artikulo.prezioa">
+    <br>
+    <button type="button" (click)="gehitu()">Gehitu</button>
+    <button type="button" (click)="aldatu()">Aldatu</button>
+</div>

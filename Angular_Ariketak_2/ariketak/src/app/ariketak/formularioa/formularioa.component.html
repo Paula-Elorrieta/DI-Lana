@@ -1,0 +1,9 @@
+<form action="">
+    <label for="izena">Sartu izena:</label>
+    <input type="text" name="izena" [(ngModel)]="persona.nombre" placeholder="Izena">
+    <br><br>
+    <label for="abizena">Sartu abizena:</label>
+    <input type="text" name="abizena" [(ngModel)]="persona.apellido" placeholder="Abizena">
+    <br>
+    <p>Izen abizena: {{persona.nombre}} {{persona.apellido}}</p>
+</form>
