@@ -9,10 +9,6 @@ import { Component } from '@angular/core';
 })
 export class DadoakComponent {
 
-  Dado = {
-    valor : Number
-  };
-
   dado1 = {
     valor : 0
   };
@@ -25,6 +21,8 @@ export class DadoakComponent {
     valor : 0
   };
 
+  resultado = "";
+
   jaurti() {
     // +1 para que el valor sea entre 1 y 6, no entre 0 y 5
     this.dado1.valor = Math.floor(Math.random() * 6) + 1;
@@ -32,8 +30,10 @@ export class DadoakComponent {
     this.dado3.valor = Math.floor(Math.random() * 6) + 1;
 
     if (this.dado1.valor == this.dado2.valor && this.dado1.valor == this.dado3.valor) {
-      
-    };
+      this.resultado = "Has ganado";
+    } else {
+      this.resultado = "Has perdido";
+    }
 
 
   }

@@ -1,0 +1,21 @@
+<div *ngIf="contagiados!=null; else espera">
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Positivos</th>
+                <th>Negativos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of contagiados">
+                <td>{{item.date}}</td>
+                <td>{{item.positive}}</td>
+                <td>{{item.negative}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #espera>
+    <h1>Esperando datos...</h1>
+</ng-template>
