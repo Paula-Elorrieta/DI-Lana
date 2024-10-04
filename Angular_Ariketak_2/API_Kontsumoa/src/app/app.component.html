@@ -1,0 +1,23 @@
+<div *ngIf="zereginak!=null; else espera">
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>User Id</th>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Completed</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let zeregin of zereginak">
+              <td>{{zeregin.userId}}</td>
+              <td>{{zeregin.id}}</td>
+              <td>{{zeregin.title}}</td>
+              <td>{{zeregin.completed}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<ng-template #espera>
+  <h1>Esperando datos...</h1>
+</ng-template>
