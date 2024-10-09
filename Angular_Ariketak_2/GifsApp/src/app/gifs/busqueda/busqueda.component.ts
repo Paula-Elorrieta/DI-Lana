@@ -6,8 +6,6 @@ import { GifsService } from '../service/gifs.service';
   selector: 'app-busqueda',
   standalone: true,
   imports: [FormsModule],
-  // Se mete el servicio en el providers. Providers es un array de servicios
-  providers: [GifsService],
   templateUrl: './busqueda.component.html',
   styleUrl: './busqueda.component.css'
 })

@@ -6,7 +6,6 @@ import { GifsService } from '../../gifs/service/gifs.service';
   selector: 'app-sidebar',
   standalone: true,
   imports: [CommonModule],
-  providers: [GifsService],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
@@ -17,8 +16,8 @@ export class SidebarComponent {
   }
 
   get historial() {
-    return this.gifsService._historial;
-    console.log(this.gifsService._historial);
+    return this.gifsService.historial;
+    console.log(this.gifsService.historial);
   }
 
 
