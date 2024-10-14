@@ -19,7 +19,7 @@ export class BusquedaComponent {
     console.log(this.valor);
 
     // Si el valor es vacío no se hace nada
-    if (this.valor.trim().length === 0) {
+    if (this.valor.trim().length == 0) {
       return alert('No se puede buscar un valor vacío');
     }
 

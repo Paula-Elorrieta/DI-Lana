@@ -8,7 +8,10 @@ import { gifsInterface } from '../interface/IGifs.interface';
 })
 export class GifsService {
 
-  constructor(private httpClien: HttpClient) { }
+  constructor(private httpClien: HttpClient) {
+    this._historial = JSON.parse(localStorage.getItem('historial')!) || [];
+    this.gifs = JSON.parse(localStorage.getItem('gifs')!) || [];
+   }
 
   private _historial: string[] = [];
   //gifs : any[] = [];
@@ -26,14 +29,23 @@ export class GifsService {
       this._historial.pop();
     }
 
-    this._historial.unshift(busqueda);
-    console.log(this._historial);
+    if (!this._historial.includes(busqueda)) {
+      // setItem es para que el valor se guarde en el localStorage.
+      // LocalStorage es un objeto que se guarda en el navegador 
+      // y se puede acceder desde cualquier parte del mismo.
+
+      // JSON.stringify es para que el valor sea convertido a string
+      localStorage.setItem('historial', JSON.stringify(this._historial));
+      
+      this._historial.unshift(busqueda);
+    }
 
 
-    this.httpClien.get("https://api.giphy.com/v1/gifs/search?api_key=nuy8WMynQh8AQFNtZ0ZA74upxyjFeGD1&q="+busqueda+"&limit=20").subscribe
+    this.httpClien.get("https://api.giphy.com/v1/gifs/search?api_key=dmYmc7hRyrpqgc5UItnw77JSb8Fi2dFf&q="+busqueda+"&limit=20").subscribe
       ((resp : any ) => {
       console.log(resp.data);
         this.gifs = resp.data;
+        localStorage.setItem('gifs', JSON.stringify(this.gifs));
     });
   }
 

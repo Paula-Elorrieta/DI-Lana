@@ -20,6 +20,10 @@ export class SidebarComponent {
     console.log(this.gifsService.historial);
   }
 
+  recuperarBusqueda(busquedaLink : string) {
+    return this.gifsService.buscarGifs(busquedaLink);
+  }
+
 
 
 }
