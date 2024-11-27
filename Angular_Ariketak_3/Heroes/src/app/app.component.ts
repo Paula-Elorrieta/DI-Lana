@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { HeroesServiceService } from './servicio/heroes-service.service';
 
 @Component({
     selector: 'app-root',
@@ -8,6 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent{
   title = 'heroesAPP';
+
 }

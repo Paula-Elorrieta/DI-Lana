@@ -6,20 +6,34 @@ import { Hero } from '../interface';
   providedIn: 'root'
 })
 export class HeroesServiceService {
+  _heroes : Hero[] = [];
+  httpClient : HttpClient;
+  Url  = "http://localhost:3000/heroes";
 
   constructor(httpclient : HttpClient) {
     this.httpClient = httpclient;
   }
 
-  _heroes : Hero[] = [];
-  httpClient : HttpClient;
-
-  getHeroes(): Hero[] {
+  get getHeroesKopia() {
     return [...this._heroes];
   }
 
-  fetchHeroes() {
-
+  fetchHeroes() : Promise<boolean> {
+    return new Promise((resolve, reject) => {
+      this.httpClient.get<Hero[]>(this.Url).subscribe({
+        next: (resp: Hero[]) => {
+          this._heroes = resp;
+          console.log('Superheroes fetched:', this.getHeroesKopia);
+        },
+        error: (error) => {
+          console.error('Error fetching superheroes:', error);
+          reject(false);
+        },
+        complete: () => {
+          resolve(true);
+        }
+      });
+    });
   }
 
 
