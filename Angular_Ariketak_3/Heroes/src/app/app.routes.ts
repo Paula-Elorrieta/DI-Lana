@@ -6,6 +6,7 @@ import { AgregarComponent } from './heroes/pages/agregar/agregar.component';
 import { BuscarComponent } from './heroes/pages/buscar/buscar.component';
 import { HeroeComponent } from './heroes/pages/heroe/heroe.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { HomeComponent } from './heroes/pages/home/home.component';
 
 export const routes: Routes = [
     {
@@ -16,7 +17,9 @@ export const routes: Routes = [
         ]
     },
     {
-        path: 'heroes', children: [
+        path: 'heroes', 
+        component: HomeComponent,
+        children: [
             {path: 'listado', component: ListadoComponent},
             {path: 'agregar', component: AgregarComponent},
             {path: 'editar/:id', component: AgregarComponent},
