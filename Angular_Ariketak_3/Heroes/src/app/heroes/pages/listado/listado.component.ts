@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HeroesServiceService } from '../../../servicio/heroes-service.service';
 import { Hero } from '../../../interface';
 import { CommonModule } from '@angular/common';
-import { MatDivider, MatDividerModule } from '@angular/material/divider';
+import { MatDivider } from '@angular/material/divider';
 import { HeroeTarjetaComponent } from '../../components/heroe-tarjeta/heroe-tarjeta.component';
 
 

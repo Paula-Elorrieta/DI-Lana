@@ -1,1 +1,32 @@
-<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+<div *ngIf="!heroe ; else otrositio">
+	<mat-spinner></mat-spinner>
+</div>
+<ng-template #otrositio>
+	<mat-card class="col-12 sm:col-7">
+    	<mat-card-header>
+        	<mat-card-title>{{heroe?.alter_ego}}</mat-card-title>
+        	<mat-card-subtitle>{{heroe?.superhero}}</mat-card-subtitle>
+    	</mat-card-header>
+    	<img [src]="heroe! | imagen" [alt]="heroe?.superhero" mat-card-image>
+	</mat-card>
+	<mat-card class="col-12 sm:col-6">
+    	<mat-card-header>
+        	<mat-card-title>Información</mat-card-title>
+        	<mat-card-subtitle>{{heroe?.superhero}}</mat-card-subtitle>
+    	</mat-card-header>
+    	<mat-card-content>
+        	<mat-list>
+            	<mat-list-item>{{heroe?.first_appearance}}</mat-list-item>
+            	<mat-list-item>{{heroe?.characters}}</mat-list-item>
+            	<mat-list-item>{{heroe?.publisher}}</mat-list-item>
+            	<mat-list-item>{{heroe?.alter_ego}}</mat-list-item>
+        	</mat-list>
+        	<!-- <button mat-button color="warn" (click)="regresar()">
+            	Regresar
+        	</button> -->   
+            <button mat-button color="warn" routerLink="/heroes/listado">
+                Regresar
+            </button>
+    	</mat-card-content>
+	</mat-card>
+</ng-template>
