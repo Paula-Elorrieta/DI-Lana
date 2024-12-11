@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{errezeta.deskribapena}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="errezeta | imagen" [alt]="errezeta.prezioa">
+    <mat-card-content>
+        <h3>{{errezeta.osagaiak}}</h3>
+        <p>
+            <strong>Osagaiak: </strong>{{errezeta.osagaiak}}
+            <br>
+            <strong>Descrbapena: </strong>{{errezeta.deskribapena}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="warn" routerLink="/errezetak/{{errezeta.id}}">Gehiago...</button>
+        <button mat-button color="info" routerLink="/errezetak/editar/{{errezeta.id}}">Editatu</button>
+    </mat-card-actions>
+  </mat-card>

@@ -1,1 +1,26 @@
-<p>errezeta works!</p>
+<div *ngIf="!errezeta ; else otrositio">
+	<mat-spinner></mat-spinner>
+</div>
+<ng-template #otrositio>
+	<mat-card class="col-12 sm:col-7">
+    	<mat-card-header>
+        	<mat-card-title>{{errezeta?.deskribapena}}</mat-card-title>
+    	</mat-card-header>
+    	<img [src]="errezeta! | imagen" [alt]="errezeta?.deskribapena" mat-card-image>
+	</mat-card>
+	<mat-card class="col-12 sm:col-6">
+    	<mat-card-header>
+        	<mat-card-title>Informazioa</mat-card-title>
+        	<mat-card-subtitle>{{errezeta?.deskribapena}}</mat-card-subtitle>
+    	</mat-card-header>
+    	<mat-card-content>
+        	<mat-list>
+            	<mat-list-item>Osagaiak: {{errezeta?.osagaiak}}</mat-list-item>
+            	<mat-list-item>Prezioa: {{errezeta?.prezioa}}€</mat-list-item>
+        	</mat-list>
+            <button mat-button color="warn" routerLink="/errezetak/listado">
+                Atzera
+            </button>
+    	</mat-card-content>
+	</mat-card>
+</ng-template>

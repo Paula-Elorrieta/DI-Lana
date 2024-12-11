@@ -1,1 +1,28 @@
-<p>buscar works!</p>
+<form class="example-form">
+    <div>
+      <h1>Errezeta bilatzailea</h1>
+    </div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Bilatu</mat-label>
+      <input type="text" placeholder="Aukera bat" matInput [(ngModel)]="hitza" name="hitza"
+        [matAutocomplete]="auto" (input)="buscar()">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="optionSelected($event.option.value)">
+        <mat-option *ngFor="let errezeta of errezetaFiltratuta" [value]="errezeta">
+          {{errezeta.deskribapena}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+</form>
+  <div *ngIf="errezeta">
+    <app-errezeta-tarjeta [errezeta]="errezeta"></app-errezeta-tarjeta>
+  </div>
+  <div *ngIf="!errezeta">
+    <mat-card class="col-2 sm:col-6">
+      <mat-card-header>
+        <mat-card-title>Ez da topatu errezetarik</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Sahiatu errezeta bat</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
