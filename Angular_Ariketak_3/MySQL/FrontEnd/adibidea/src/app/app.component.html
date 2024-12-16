@@ -1,0 +1,18 @@
+<div>
+	<h1>Lagunen zerrenda</h1>
+	<p>Id:</p>
+	<input type="text" required [(ngModel)]="laguna.id">
+	<p>Izena:</p>
+	<input type="text" required [(ngModel)]="laguna.izena">
+	<br>
+	<br>
+	<button (click)="addItem()">Laguna gehitu</button>
+	<ul>
+    	<li *ngFor="let item of items">
+        	{{ item.id }} - {{ item.izena }}
+        	<button (click)="selectItem(item)">Aukeratu</button>
+        	<button (click)="updateItem(item)">Eguneratu</button>
+        	<button (click)="deleteItem(item.id)">Ezabatu</button>
+    	</li>
+	</ul>
+</div>
