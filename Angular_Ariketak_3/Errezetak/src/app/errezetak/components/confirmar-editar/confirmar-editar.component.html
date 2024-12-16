@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Eguneratu errezeta</h2>
+<mat-dialog-content>
+  <p>Eguneratuko da errezeta hau: {{ data.deskribapena }}</p>
+  <p>Ziur zaude eguneratu nahi duzula?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="eguneratu()" color="warn">Bai</button>
+  <button mat-button (click)="cerrar()">Deuseztatu</button>
+</mat-dialog-actions>

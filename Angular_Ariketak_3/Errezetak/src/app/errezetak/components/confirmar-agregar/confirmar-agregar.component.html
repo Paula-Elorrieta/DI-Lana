@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Errezeta gehitu</h2>
+<mat-dialog-content>
+	<p>Gehituko duzu errezeta hau: {{ data.deskribapena }}</p>
+	<p>Ziur zaude gehitu nahi duzula?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+	<button mat-button (click)="agregar()" color="warn">Bai</button>
+	<button mat-button (click)="cerrar()">Deuseztatu</button>
+</mat-dialog-actions>

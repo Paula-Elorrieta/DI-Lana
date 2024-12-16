@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Ziur zaude?</h2>
+<mat-dialog-content>
+  <p>Ezabatuko da errezeta hau: {{ data.deskribapena }}</p>
+  <p>Ziur zaude ezabatu nahi duzula?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="borrar()" color="warn">Bai</button>
+  <button mat-button (click)="cerrar()">Deuseztatu</button>
+</mat-dialog-actions>

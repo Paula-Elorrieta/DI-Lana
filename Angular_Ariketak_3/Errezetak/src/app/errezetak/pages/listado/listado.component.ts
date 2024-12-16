@@ -23,6 +23,6 @@ export class ListadoComponent {
     if (await this.errezetakService.fetchErrezetak()) {
         this.errezetak = this.errezetakService.getErrezetakKopia;
     }
-}
+  }
 
 }

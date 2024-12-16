@@ -1,4 +1,4 @@
-{  
+{
   "erabiltzaileak": [
     {
       "id": "1",
@@ -6,42 +6,41 @@
       "email": "elorrieta@gmail.com"
     }
   ],
-    "errezetak": [
- {
-  "id" : "1",
-  "deskribapena" : "Deluxe patatak",
-  "prezioa" : "12.55",
-  "osagaiak":"1500g ur, 600g patata, 50g irin",
-  "argazkia":"https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/13297983-E651-4135-8049-EB0BB22F1980/Derivates/e4870412-1264-4d82-a157-f3d6079bca90.jpg"
-  },
-  {
-  "id" : "2",
-  "deskribapena" : "Sagar karamelizatuak",
-  "prezioa" : "15.50",
-  "osagaiak":"300g sagar, 65g azukre, 120g irin, 55g gurin",
-  "argazkia":"https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/BA441FCA-B631-474A-8635-FA8F1D848153/Derivates/58DA54AD-57C7-4003-AC12-58716EFB05B3.jpg"
-  },
-  {
-  "id" : "3",
-  "deskribapena" : "Meloi konfitura",
-  "prezioa" : "22.5",
-  "osagaiak":"900g meloi, 600g azukre",
-  "argazkia":"https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/C07553B0-AE7D-45A0-8A14-54C411776408/Derivates/0991496a-f205-4a3c-9475-3f4a9e47bfa6.jpg"
-  },
-  {
-  "id" : "4",
-  "deskribapena" : "Osoko kipula-tarta",
-  "prezioa" : "17",
-  "osagaiak":"210g gari osoko irina, 110g gurin, 70g ur",
-  "argazkia":"https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/83927d65-8c46-4575-87e6-04890371f2b8/Derivates/247354e7-53f4-4fcb-9a6f-84ac6894b45b.jpg"
-  },
-  {
-  "id" : "5",
-  "deskribapena" : "Kalabaza pastela",
-  "prezioa" : "20",
-  "osagaiak":"450g kalabaza, 260g irin, 225g gurin",
-  "argazkia":"https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/b5fb8895-0e28-4bab-8f56-41455438a296/Derivates/98763f65-d1e0-4a14-b18d-6a0277c3f909.jpg"
-  }
+  "errezetak": [
+    {
+      "id": "1",
+      "deskribapena": "Deluxe patatak",
+      "prezioa": "12.55",
+      "osagaiak": "1500g ur, 600g patata, 50g irin",
+      "argazkia": "https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/13297983-E651-4135-8049-EB0BB22F1980/Derivates/e4870412-1264-4d82-a157-f3d6079bca90.jpg"
+    },
+    {
+      "id": "2",
+      "deskribapena": "Sagar karamelizatua",
+      "prezioa": "15.50",
+      "osagaiak": "300g sagar, 65g azukre, 120g irin, 55g gurin",
+      "argazkia": "https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/BA441FCA-B631-474A-8635-FA8F1D848153/Derivates/58DA54AD-57C7-4003-AC12-58716EFB05B3.jpg"
+    },
+    {
+      "id": "3",
+      "deskribapena": "Meloi konfitura",
+      "prezioa": "22.5",
+      "osagaiak": "900g meloi, 600g azukre",
+      "argazkia": "https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/C07553B0-AE7D-45A0-8A14-54C411776408/Derivates/0991496a-f205-4a3c-9475-3f4a9e47bfa6.jpg"
+    },
+    {
+      "id": "4",
+      "deskribapena": "Osoko kipula-tart",
+      "prezioa": "17",
+      "osagaiak": "210g gari osoko irina, 110g gurin, 70g ur",
+      "argazkia": "https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/83927d65-8c46-4575-87e6-04890371f2b8/Derivates/247354e7-53f4-4fcb-9a6f-84ac6894b45b.jpg"
+    },
+    {
+      "id": "5",
+      "deskribapena": "Cóctel de vieira",
+      "prezioa": "20",
+      "osagaiak": "3 vieiras 6 gambones 2 huevos Lechuga Salsa rosa (mayonesa, ketchup y un chorrito de ron)",
+      "argazkia": "https://img-global.cpcdn.com/recipes/1062bc871aec054f/680x964cq70/coctel-de-vieira-foto-principal.webp"
+    }
   ]
-  }
-  
+}

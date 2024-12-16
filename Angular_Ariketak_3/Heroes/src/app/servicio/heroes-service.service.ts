@@ -98,5 +98,7 @@ export class HeroesServiceService {
 
   mostrarSnackBar(mensaje: string): void {
     this.snackBar.open(mensaje, 'Cerrar', { duration: 2500 });
-    }
+  }
+
+
 }

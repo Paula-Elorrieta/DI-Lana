@@ -10,12 +10,10 @@ export class ImagenPipe implements PipeTransform {
 
   transform(errezeta: Errezeta): string {
 
-    if (!errezeta.id && !errezeta.argazkia) {
-      return 'heroes/no-image.png';
-    } else if (errezeta.argazkia) {
+    if (errezeta.argazkia) {
       return errezeta.argazkia;
     } else {
-      return "heroes/" + errezeta.id + '.jpg';
+      return "errezetak/no-image.png";
     }
   }
 

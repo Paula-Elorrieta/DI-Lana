@@ -7,6 +7,7 @@ import { BuscarComponent } from './errezetak/pages/buscar/buscar.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { HomeComponent } from './errezetak/pages/home/home.component';
 import { ErrezetaComponent } from './errezetak/pages/errezeta/errezeta.component';
+import { authGuard } from './auth/guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -18,7 +19,7 @@ export const routes: Routes = [
     },
     {
         path: 'errezetak', 
-        component: HomeComponent,
+        component: HomeComponent, canActivate: [authGuard],
         children: [
             {path: 'listado', component: ListadoComponent},
             {path: 'agregar', component: AgregarComponent},
