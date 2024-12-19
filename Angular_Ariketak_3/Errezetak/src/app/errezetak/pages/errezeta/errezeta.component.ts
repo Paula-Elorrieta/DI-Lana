@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { Errezeta } from '../../interface/interface';
 import { CommonModule } from '@angular/common';
 import { ErrezetakService } from '../../../service/errezetak.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-errezeta',
@@ -21,9 +22,13 @@ export class ErrezetaComponent {
 
   id: string = ''
 
-  constructor(private activatedRoute: ActivatedRoute, private errezetaService: ErrezetakService,  private router: Router) { }
+  constructor(private activatedRoute: ActivatedRoute, private errezetaService: ErrezetakService,  private router: Router, private snackBar: MatSnackBar) { }
   ngOnInit(): void {
 	  this.id = this.activatedRoute.snapshot.params['id'];
+
+    this.snackBar.open("Errezeta aukeratua", "Itxi", {
+      duration: 2000,
+    });
   }
 
   get errezeta() {
