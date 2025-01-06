@@ -1,0 +1,14 @@
+<div *ngIf="jatetxea">
+  <h2>{{ 'jatetxea' | translate }}: {{ jatetxea.documentName }}</h2>
+  <ul>
+    <li><strong>{{ 'Izena' | translate }}:</strong> {{ jatetxea.documentName }}</li>
+    <li><strong>{{ 'Udalerria' | translate }}:</strong> {{ jatetxea.municipality }}</li>
+    <li><strong>{{ 'Deskribapena' | translate }}:</strong> {{ jatetxea.documentDescription }}</li>
+    <li><strong>{{ 'Telefonoa' | translate }}:</strong> {{ jatetxea.phone }}</li>
+    <li><strong>{{ 'Sitio Web' | translate }}:</strong> <a [href]="jatetxea.web" target="_blank"> {{ jatetxea.web }}</a></li>
+    <li><strong><a [routerLink]="['/mapa', jatetxea.latwgs84, jatetxea.lonwgs84]" class="button">{{'MapanIkusi' | translate}}</a></strong></li>
+  </ul>
+</div>
+<div *ngIf="!jatetxea">
+  <p>{{ 'Jatetxea ez da aurkitu' | translate }}</p>
+</div>

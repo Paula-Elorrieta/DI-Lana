@@ -1,0 +1,66 @@
+/* Estilos existentes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 50rem;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+td {
+    background-color: #fff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

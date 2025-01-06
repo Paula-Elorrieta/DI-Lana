@@ -1,0 +1,42 @@
+:host {
+    display: block;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+li strong {
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: #ff0000;
+    font-size: 18px;
+}

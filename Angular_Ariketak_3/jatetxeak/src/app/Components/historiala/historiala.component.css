@@ -1,0 +1,160 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li strong {
+    color: #555;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+div[ngIf] {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    li {
+        font-size: 0.9em;
+    }
+}
+
+/* Additional styles for better UX */
+div[ngIf] {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: center;
+    color: #888;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+p::before {
+    content: "⚠️ ";
+}
+
+p::after {
+    content: " ⚠️";
+}
+
+/* Hover effects */
+li:hover {
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+    color: #ff4500;
+}
+
+/* Focus styles for accessibility */
+a:focus {
+    outline: 2px dashed #1e90ff;
+    outline-offset: 4px;
+}
+
+li:focus-within {
+    background: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Transition for smooth effects */
+li, a {
+    transition: all 0.3s ease;
+}
+
+/* Additional animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+div[ngIf] {
+    animation: fadeIn 1s ease-in-out, slideIn 0.5s ease-in-out;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #f4f4f4;
+    }
+
+    li {
+        background: #444;
+        color: #f4f4f4;
+    }
+
+    a {
+        color: #1e90ff;
+    }
+
+    a:hover {
+        color: #ff4500;
+    }
+
+    p {
+        color: #bbb;
+    }
+}

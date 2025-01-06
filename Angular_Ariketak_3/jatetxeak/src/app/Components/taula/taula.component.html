@@ -1,0 +1,45 @@
+<form> <br>
+    <input type="text" [placeholder]="'Izena' | translate" #filter />
+    <button class="btn btn-primary" type="button" (click)="filtraketaEgin(filter.value)">
+      {{ 'Bilatu' | translate }}
+    </button> <br><br>
+    <label for="languageSelect">{{ 'AukeratuHizkuntza' | translate }}:</label>
+    <select id="languageSelect" (change)="changeLanguage($event)">
+      <option value="eu" [selected]="currentLanguage === 'eu'">{{ 'Euskara' | translate }}</option>
+      <option value="es" [selected]="currentLanguage === 'es'">{{ 'Español' | translate }}</option>
+      <option value="en" [selected]="currentLanguage === 'en'">{{ 'English' | translate }}</option>
+    </select> <br><br>
+    <a [routerLink]="['/mapa']" class="button">{{ 'MapaOsoa' | translate }}</a>
+</form>
+
+<p>{{(currentPage - 1) * rowsPerPage + 1}}-etik {{Math.min(currentPage * rowsPerPage, totalItems)}}-era {{ 'jatetxetik aurkezten dira' | translate }} {{totalItems}} {{ 'jatetxeak' | translate }}</p>
+
+<div class="mb-3">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">{{ 'Previous' | translate }}</button>
+    <button (click)="resetPage()">{{ 'Reset' | translate }}</button>
+    <button (click)="nextPage()" [disabled]="(currentPage * rowsPerPage) >= totalItems">{{ 'Next' | translate }}</button>
+</div>
+
+<table id="customerTable">
+    <thead>
+        <tr>
+            <th>{{ 'Izena' | translate }}</th>
+            <th>{{ 'Udalerria' | translate }}</th>
+            <th>{{ 'Xehetasuna' | translate }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let jatetxea of paginatedJatetxeak">
+          <td>{{ jatetxea.documentName }}</td>
+          <td>{{ jatetxea.municipality }}</td>
+          <td><a [routerLink]="['/details', jatetxea.municipality]" class="button">{{ 'Xehetasuna' | translate }}</a></td>
+        </tr>
+    </tbody>      
+</table>
+
+<div class="pagination">
+    <span>{{ 'Orria' | translate }} {{currentPage}} - </span>
+</div>
+
+<h2>{{ 'Mapa' | translate }}</h2>
+<div id="mapa" style="height: 800px; width: 100%;"></div>
